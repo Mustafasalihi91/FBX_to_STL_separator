@@ -1,1 +1,97 @@
 # FBX_to_STL_separator
+
+## Project Overview
+
+FBX_to_STL_separator is a powerful two-step automation tool designed to streamline the process of extracting and converting architectural elements from FBX files into individual STL files. This toolset, comprising a Blender Python script and a CloudCompare batch processor, is particularly useful for professionals and students working in Building Information Modeling (BIM), architectural visualization, and 3D printing preparation.
+
+### Purpose
+
+The primary purpose of this toolset is to automate the tedious task of manually separating and converting individual architectural elements from complex 3D models. It addresses the common challenge in architectural workflows where entire building models need to be broken down into their constituent parts and converted to a widely-compatible format for further analysis, modification, or 3D printing.
+
+### Main Functionality
+
+1. **FBX Import and Object Separation**: Imports FBX files and automatically identifies specific architectural elements based on predefined keywords.
+2. **Naming and Data Management**: Applies consistent naming conventions and implements a hashing system for persistent object numbering across multiple runs and epochs.
+3. **Geometry Processing**: Calculates bounding box coordinates for spatial analysis and placement.
+4. **File Conversion**: Exports separated objects as individual OBJ files, then converts them to STL format using CloudCompare.
+5. **Data Persistence**: Stores object data in CSV files for easy reference and further processing.
+6. **File Organization**: Automatically organizes the resulting STL files into a designated folder structure.
+
+## Prerequisites
+
+- Windows operating system
+- Blender 3.6 or later
+- CloudCompare 2.13 or later (default path: C:\Program Files\CloudCompare\CloudCompare.exe)
+- Python 3.7 or higher (included with Blender)
+
+### Required Libraries
+
+- Blender Python API (bpy) - included with Blender
+- Standard Python libraries: os, csv, mathutils, hashlib - included in Python's standard library
+- CloudCompare command-line interface - included in CloudCompare installation
+
+No additional pip installations are required.
+
+## Installation and Setup
+
+1. **Download the Scripts**
+   - Clone this repository or download both `FBXtoSTLseparator.py` and `OBJtoSTL.bat` files.
+
+2. **Blender Configuration**
+   - Launch Blender
+   - Navigate to Edit > Preferences > File Paths
+   - In the "Scripts" section, add the directory containing `FBXtoSTLseparator.py`
+
+3. **CloudCompare Configuration**
+   - Ensure CloudCompare is installed in the default location or update the path in `OBJtoSTL.bat`
+
+4. **Configure File Paths**
+   - Edit `FBXtoSTLseparator.py` and update the following paths:
+     ```python
+     CONFIG = {
+         "fbx_path": r"C:\Path\To\Your\InputModel.fbx",
+         "obj_dir": r"C:\Path\To\Your\OutputOBJs",
+         "csv_file_path": r"C:\Path\To\Your\OutputData.csv",
+         "numbering_dir": r"C:\Path\To\Your\NumberingCSVs"
+     }
+     ```
+   - Edit `OBJtoSTL.bat` if CloudCompare is installed in a non-default location:
+     ```batch
+     set "cloudcompare_executable=C:\Your\Custom\Path\To\CloudCompare.exe"
+     ```
+
+5. **Verify Blender Script Installation**
+   - In Blender's Text Editor, create a new file and enter:
+     ```python
+     from FBXtoSTLseparator import *
+     ```
+   - Run the script. If no errors occur, the installation is successful.
+
+## Usage
+
+### FBX to OBJ Conversion (Blender)
+
+1. Open Blender and load the `FBXtoSTLseparator.py` script.
+2. Adjust the CONFIG dictionary if necessary.
+3. Run the script to process the FBX file and generate separated OBJ files.
+
+### OBJ to STL Conversion (CloudCompare)
+
+1. Place `OBJtoSTL.bat` in the same directory as your OBJ files.
+2. Double-click `OBJtoSTL.bat` to run it.
+3. The script will:
+   - Convert all OBJ files in the current directory to STL format.
+   - Move the resulting STL files to a new 'stls' subdirectory.
+   - Delete the original OBJ files.
+
+## Caution
+
+The OBJ to STL conversion script deletes the original OBJ files after conversion. Ensure you have backups before running the script.
+
+## Contributing
+
+Contributions to improve FBX_to_STL_separator are welcome. Please feel free to submit pull requests or open issues to discuss proposed changes or report bugs.
+
+## License
+
+[Specify your license here, e.g., MIT, GPL, etc.]
