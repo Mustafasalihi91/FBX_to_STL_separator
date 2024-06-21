@@ -94,4 +94,4 @@ Contributions to improve FBX_to_STL_separator are welcome. Please feel free to s
 
 ## License
 
-[Specify your license here, e.g., MIT, GPL, etc.]
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
