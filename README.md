@@ -2,7 +2,12 @@
 
 ## Project Overview
 
-FBX_to_STL_separator is a powerful two-step automation tool designed to streamline the process of extracting and converting architectural elements from FBX files into individual STL files. This toolset, comprising a Blender Python script and a CloudCompare batch processor, is particularly useful for professionals and students working in Building Information Modeling (BIM), architectural visualization, and 3D printing preparation.
+FBX_to_STL_separator is a powerful two-step automation tool designed to streamline the process of extracting and converting architectural elements from FBX files into individual STL files. This toolset comprises two main components:
+
+1. `FBX to OBJS.blend`: A Blender file containing a Python script for FBX to OBJ conversion and element separation.
+2. `OBJtoSTL.bat`: A batch file for converting OBJ files to STL format using CloudCompare.
+
+This toolset is particularly useful for professionals and students working in Building Information Modeling (BIM), architectural visualization, and 3D printing preparation.
 
 ## Project Origin
 
@@ -39,18 +44,18 @@ No additional pip installations are required.
 ## Installation and Setup
 
 1. **Download the Scripts**
-   - Clone this repository or download both `FBXtoSTLseparator.py` and `OBJtoSTL.bat` files.
+   - Clone this repository or download both `FBX to OBJS.blend` and `OBJtoSTL.bat` files.
 
 2. **Blender Configuration**
    - Launch Blender
-   - Navigate to Edit > Preferences > File Paths
-   - In the "Scripts" section, add the directory containing `FBXtoSTLseparator.py`
+   - Open the `FBX to OBJS.blend` file in Blender
 
 3. **CloudCompare Configuration**
    - Ensure CloudCompare is installed in the default location or update the path in `OBJtoSTL.bat`
 
 4. **Configure File Paths**
-   - Edit `FBXtoSTLseparator.py` and update the following paths:
+   - In Blender, open the Text Editor window and locate the script within the `FBX to OBJS.blend` file
+   - Update the following paths in the script:
      ```python
      CONFIG = {
          "fbx_path": r"C:\Path\To\Your\InputModel.fbx",
@@ -64,20 +69,26 @@ No additional pip installations are required.
      set "cloudcompare_executable=C:\Your\Custom\Path\To\CloudCompare.exe"
      ```
 
-5. **Verify Blender Script Installation**
-   - In Blender's Text Editor, create a new file and enter:
-     ```python
-     from FBXtoSTLseparator import *
-     ```
-   - Run the script. If no errors occur, the installation is successful.
+5. **Verify Blender Script**
+   - In Blender, with the `FBX to OBJS.blend` file open, run the script from the Text Editor window
+   - If no errors occur, the setup is successful
+
+## Usage
 
 ## Usage
 
 ### FBX to OBJ Conversion (Blender)
 
-1. Open Blender and load the `FBXtoSTLseparator.py` script.
-2. Adjust the CONFIG dictionary if necessary.
-3. Run the script to process the FBX file and generate separated OBJ files.
+1. Open the `FBX to OBJS.blend` file in Blender
+2. Adjust the CONFIG dictionary in the script if necessary. Replace the example paths with your specific directories:
+   ```python
+   CONFIG = {
+       "fbx_path": r"C:\Path\To\Your\InputModel.fbx",
+       "obj_dir": r"C:\Path\To\Your\OutputOBJs",
+       "csv_file_path": r"C:\Path\To\Your\OutputData.csv",
+       "numbering_dir": r"C:\Path\To\Your\NumberingCSVs"
+   }
+3.Run the script to process the FBX file and generate separated OBJ files
 
 ### OBJ to STL Conversion (CloudCompare)
 
@@ -91,6 +102,12 @@ No additional pip installations are required.
 ## Caution
 
 The OBJ to STL conversion script deletes the original OBJ files after conversion. Ensure you have backups before running the script.
+
+## Troubleshooting
+
+If the script fails to identify objects, check if your FBX file uses the expected keywords ("Column", "Wall", "Floor") in object names.
+Ensure all file paths in the CONFIG dictionary are correctly set and accessible.
+If CloudCompare fails to convert OBJ to STL, verify that CloudCompare is correctly installed and the path in the batch file is correct.
 
 ## Contributing
 
