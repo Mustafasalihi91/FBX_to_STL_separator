@@ -4,6 +4,10 @@
 
 FBX_to_STL_separator is a powerful two-step automation tool designed to streamline the process of extracting and converting architectural elements from FBX files into individual STL files. This toolset, comprising a Blender Python script and a CloudCompare batch processor, is particularly useful for professionals and students working in Building Information Modeling (BIM), architectural visualization, and 3D printing preparation.
 
+## Project Origin
+
+This project was conceptualized and performed during a research stay at the research group of Jun.-Prof. Dr. Reza Maalek, the GOLDBECK endowed chair in Digital Engineering and Construction (DEC) at the Institute of Technology and Management in Construction (TMB) of the Karlsruhe Institute of Technology (KIT).
+
 ### Purpose
 
 The primary purpose of this toolset is to automate the tedious task of manually separating and converting individual architectural elements from complex 3D models. It addresses the common challenge in architectural workflows where entire building models need to be broken down into their constituent parts and converted to a widely-compatible format for further analysis, modification, or 3D printing.
