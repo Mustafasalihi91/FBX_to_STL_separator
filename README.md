@@ -75,8 +75,6 @@ No additional pip installations are required.
 
 ## Usage
 
-## Usage
-
 ### FBX to OBJ Conversion (Blender)
 
 1. Open the `FBX to OBJS.blend` file in Blender
