@@ -15,7 +15,7 @@ This project was conceptualized and performed during a research stay at the rese
 
 ## Video Demonstration
 
-[![Demo](https://share.gifyoutube.com/KzB6Gb.gif)](https://www.youtube.com/watch?v=dvv-K5EM_jU)
+[![FBXseperator](https://img.youtube.com/vi/dvv-K5EM_jU/0.jpg)](https://www.youtube.com/watch?v=dvv-K5EM_jU)
 
 ### Purpose
 
