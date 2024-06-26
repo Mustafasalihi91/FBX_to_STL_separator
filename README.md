@@ -13,8 +13,9 @@ This toolset is particularly useful for professionals and students working in Bu
 
 This project was conceptualized and performed during a research stay at the research group of Jun.-Prof. Dr. Reza Maalek, the GOLDBECK endowed chair in Digital Engineering and Construction (DEC) at the Institute of Technology and Management in Construction (TMB) of the Karlsruhe Institute of Technology (KIT).
 
-## Video of the script 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dvv-K5EM_jU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+## Video Demonstration
+
+[![Watch the video](https://img.youtube.com/vi/dvv-K5EM_jU/0.jpg)](https://www.youtube.com/watch?v=dvv-K5EM_jU)
 
 ### Purpose
 
