@@ -15,8 +15,8 @@ This project was conceptualized and performed during a research stay at the rese
 
 ## Video Demonstration
 
-[[![FBXseperator](https://img.youtube.com/vi/dvv-K5EM_jU/0.jpg)](https://www.youtube.com/watch?v=dvv-K5EM_jU)
-](https://youtu.be/dvv-K5EM_jU?si=qa7Zt3_SvvH5WSve)
+https://github.com/Mustafasalihi91/FBX_to_STL_separator/assets/123275073/9cfa431e-1830-47df-b262-ca188d3f1604
+
 
 ### Purpose
 
