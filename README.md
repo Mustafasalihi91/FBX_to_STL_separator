@@ -13,6 +13,9 @@ This toolset is particularly useful for professionals and students working in Bu
 
 This project was conceptualized and performed during a research stay at the research group of Jun.-Prof. Dr. Reza Maalek, the GOLDBECK endowed chair in Digital Engineering and Construction (DEC) at the Institute of Technology and Management in Construction (TMB) of the Karlsruhe Institute of Technology (KIT).
 
+## Video of the script 
+[![Video Title](https://img.youtube.com/vi/dvv-K5EM_jU/0.jpg)](https://www.youtube.com/watch?v=dvv-K5EM_jU)
+
 ### Purpose
 
 The primary purpose of this toolset is to automate the tedious task of manually separating and converting individual architectural elements from complex 3D models. It addresses the common challenge in architectural workflows where entire building models need to be broken down into their constituent parts and converted to a widely-compatible format for further analysis, modification, or 3D printing.
